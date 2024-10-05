@@ -17,11 +17,11 @@ const QuestionComponent: React.FC<QuestionProps> = ({ question, onAnswer }) => {
     <div className="question-container">
       <QuestionText text={question.text} />
       <div className="options">
-        <Button onClick={() => handleOptionClick(1)} label="Stimme voll zu" />
-        <Button onClick={() => handleOptionClick(2)} label="Stimme zu" />
-        <Button onClick={() => handleOptionClick(3)} label="Neutral" />
-        <Button onClick={() => handleOptionClick(4)} label="Stimme nicht zu" />
-        <Button onClick={() => handleOptionClick(5)} label="Stimme überhaupt nicht zu" />
+        <Button onClick={() => handleOptionClick(2)} label="Stimme voll zu" />
+        <Button onClick={() => handleOptionClick(1)} label="Stimme zu" />
+        <Button onClick={() => handleOptionClick(0)} label="Neutral" />
+        <Button onClick={() => handleOptionClick(-1)} label="Stimme nicht zu" />
+        <Button onClick={() => handleOptionClick(-2)} label="Stimme überhaupt nicht zu" />
       </div>
     </div>
   );

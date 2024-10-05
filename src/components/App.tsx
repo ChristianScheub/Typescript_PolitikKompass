@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { calculateScores } from "../services/scoringService";
 import QuestionList from "./QuestionList";
 import ProgressBar from "./ui/ProgressBar";
 import Title from "./ui/Title";
 import CoordinateSystem from "./CoordinateSystemContainer";
-import { questions } from "../data/quesions"; // Importiere die Question Schnittstelle
+import { questions } from "../data/quesions";
 import { Question } from "../types";
 
 const categories = ["Wirtschaft", "Umwelt", "Sozial", "Außen- und Sicherheitspolitik", "Bildung", "Digitalisierung"];
@@ -18,6 +18,11 @@ const App: React.FC = () => {
     x: 0,
     y: 0,
   });
+
+  useEffect(() => {
+    console.log(`Scores updated: x = ${scores.x}, y = ${scores.y}`);
+  }, [scores]);
+  
   const [currentCategory, setCurrentCategory] = useState<string>(categories[0]);
 
   // Filtered questions based on the current category
