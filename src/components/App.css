@@ -1,0 +1,61 @@
+/* App.css */
+.app-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  display: flex; /* Flexbox für nebeneinanderliegende Elemente */
+  justify-content: space-between; /* Platz zwischen Fragen und Koordinatensystem */
+  align-items: flex-start; /* Vertikale Ausrichtung an der Oberseite */
+}
+
+.question-container {
+  margin: 20px 20px 20px 0; /* Rechtsabstand für die Fragen */
+  flex: 1; /* Damit die Fragen den verfügbaren Platz einnehmen */
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.progress-bar {
+  margin: 20px 0;
+}
+
+.progress {
+  background: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.progress-fill {
+  background: #4caf50;
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.result-chart-container {
+  margin-top: 20px;
+}
+
+.coordinate-system {
+  flex: 1; /* Damit das Koordinatensystem den verfügbaren Platz einnimmt */
+  margin-left: 20px; /* Abstand zu den Fragen */
+}
+
+.ui-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.ui-button:hover {
+  background-color: #45a049;
+}

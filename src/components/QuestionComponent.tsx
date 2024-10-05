@@ -1,0 +1,30 @@
+import React from 'react';
+import { Question } from '../types';
+import Button from './ui/Button';
+import QuestionText from './ui/QuestionText';
+
+interface QuestionProps {
+  question: Question;
+  onAnswer: (value: number) => void;
+}
+
+const QuestionComponent: React.FC<QuestionProps> = ({ question, onAnswer }) => {
+  const handleOptionClick = (value: number) => {
+    onAnswer(value);
+  };
+
+  return (
+    <div className="question-container">
+      <QuestionText text={question.text} />
+      <div className="options">
+        <Button onClick={() => handleOptionClick(1)} label="Stimme voll zu" />
+        <Button onClick={() => handleOptionClick(2)} label="Stimme zu" />
+        <Button onClick={() => handleOptionClick(3)} label="Neutral" />
+        <Button onClick={() => handleOptionClick(4)} label="Stimme nicht zu" />
+        <Button onClick={() => handleOptionClick(5)} label="Stimme überhaupt nicht zu" />
+      </div>
+    </div>
+  );
+};
+
+export default QuestionComponent;
