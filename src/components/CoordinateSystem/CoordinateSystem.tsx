@@ -31,13 +31,13 @@ const partiesData = [
 const CoordinateSystem: React.FC<CoordinateSystemProps> = ({
   userCoordinate,
 }) => {
-  const [chartSize, setChartSize] = useState(300); // Kleinere Initialgröße
+  const [chartSize, setChartSize] = useState(550); // Kleinere Initialgröße
 
   // Funktion zum Aktualisieren der Größe
   const updateChartSize = () => {
     const containerWidth = window.innerWidth * 0.7;
     const containerHeight = window.innerHeight * 0.7;
-    const newSize = Math.min(containerWidth, containerHeight, 500); // Maximalgröße von 500px
+    const newSize = Math.min(containerWidth, containerHeight, 900); // Maximalgröße von 500px
     setChartSize(Math.max(newSize, 200)); // Mindestgröße von 200px
   };
 

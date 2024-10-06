@@ -59,7 +59,7 @@ const QuestionList: React.FC<QuestionListProps> = ({
           </button>
         </div>
 
-        {hasAnswered && <p>Diese Frage wurde bereits beantwortet.</p>}
+        {hasAnswered && <b>Diese Frage wurde bereits beantwortet.</b>}
         <QuestionComponent question={question} onAnswer={onAnswer} />
         <ProgressBar current={currentQuestionIndex + 1} total={totalQuestions} />
       </Card>
