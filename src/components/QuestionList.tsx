@@ -1,6 +1,7 @@
 import React from "react";
-import { Question } from "../types";
-import QuestionComponent from "./QuestionComponent";
+import QuestionComponent from "./views/QuestionView";
+import Card from "../ui/Card/Card";
+import { Question } from "../types/Question";
 
 interface QuestionListProps {
   question: Question;
@@ -8,13 +9,19 @@ interface QuestionListProps {
   answered: string[]; // Change to string[]
 }
 
-const QuestionList: React.FC<QuestionListProps> = ({ question, onAnswer, answered }) => {
+const QuestionList: React.FC<QuestionListProps> = ({
+  question,
+  onAnswer,
+  answered,
+}) => {
   const hasAnswered = answered.includes(question.id); // Check if the question id is in the answered array
 
   return (
     <div>
-      <QuestionComponent question={question} onAnswer={onAnswer} />
-      {hasAnswered && <p>Diese Frage wurde bereits beantwortet.</p>}
+      <Card>
+        <QuestionComponent question={question} onAnswer={onAnswer} />
+        {hasAnswered && <p>Diese Frage wurde bereits beantwortet.</p>}
+      </Card>
     </div>
   );
 };

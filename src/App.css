@@ -47,15 +47,14 @@
   margin-left: 20px; /* Abstand zu den Fragen */
 }
 
-.ui-button {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #4caf50;
-  color: white;
-  cursor: pointer;
+.makeItCenter {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
-.ui-button:hover {
-  background-color: #45a049;
+.backgroundColorHighlight{
+  background-color: #3d6868;
+  color: white
 }

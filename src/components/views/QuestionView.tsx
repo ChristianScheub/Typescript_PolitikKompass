@@ -1,7 +1,7 @@
 import React from 'react';
-import { Question } from '../types';
-import Button from './ui/Button';
-import QuestionText from './ui/QuestionText';
+import Button from '../../ui/Button/Button';
+import QuestionText from '../../ui/QuestionText';
+import { Question } from '../../types/Question';
 
 interface QuestionProps {
   question: Question;

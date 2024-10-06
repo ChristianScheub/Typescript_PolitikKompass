@@ -9,13 +9,12 @@ import {
   ScatterChart,
   Label,
 } from "recharts";
+import Card from "../ui/Card/Card";
 
 interface CoordinateSystemProps {
   userCoordinate: { x: number; y: number };
 }
-const partiesData = [
-  { name: "Ich", x: 0, y: 0, fill: "#800080" }
-];
+const partiesData = [{ name: "Union", x: 6, y: 2, fill: "#FFA500" }];
 /*
 const partiesData = [
   { name: "Ich", x: 0, y: 0, fill: "#000000" }, // User position
@@ -28,38 +27,55 @@ const partiesData = [
   { name: "BSW", x: -1, y: 0, fill: "#FFC0CB" }, // BSW position
 ];*/
 
-const CoordinateSystem: React.FC<CoordinateSystemProps> = ({ userCoordinate }) => {
+const CoordinateSystem: React.FC<CoordinateSystemProps> = ({
+  userCoordinate,
+}) => {
   return (
-    <div style={{ width: "90%", height: "400px" }}>
-      <ScatterChart
-        width={600}
-        height={600}
-        margin={{ right: 20, bottom: 5, left: 10 }}
-      >
-        <CartesianGrid />
-        <XAxis type="number" dataKey="x" domain={[-10, 10]}>
-          <Label value="sozialistisch | kapitalistisch" offset={-5} position="insideBottomRight" />
-        </XAxis>
-        <YAxis type="number" dataKey="y" domain={[-10, 10]}>
-          <Label value="liberal | konservativ" angle={-90} offset={-5} position="insideLeft" />
-        </YAxis>
-        <Tooltip cursor={{ strokeDasharray: "3 3" }} />
-        <Legend />
-        {partiesData.map((party) => (
-          <React.Fragment key={party.name}>
-            <Scatter name={party.name} data={[party]} fill={party.fill} />
+    <Card>
+      <div style={{ width: "100%", height: "700px" }}>
+        <ScatterChart
+          width={600}
+          height={600}
+          margin={{ right: 20, bottom: 5, left: 10 }}
+        >
+          <CartesianGrid />
+          <XAxis type="number" dataKey="x" domain={[-40, 40]}>
             <Label
-              value={party.name}
-              position={{ x: party.x * 40, y: party.y * -40 }}
-              fill={party.fill}
-              fontSize={12}
-              offset={10}
+              value="sozialistisch | kapitalistisch"
+              offset={-5}
+              position="insideBottomRight"
             />
-          </React.Fragment>
-        ))}
-        <Scatter name="Meine Position" data={[userCoordinate]} fill="#000000" />
-      </ScatterChart>
-    </div>
+          </XAxis>
+          <YAxis type="number" dataKey="y" domain={[-40, 40]}>
+            <Label
+              value="liberal | konservativ"
+              angle={-90}
+              offset={-5}
+              position="insideLeft"
+            />
+          </YAxis>
+          <Tooltip cursor={{ strokeDasharray: "3 3" }} />
+          <Legend />
+          {partiesData.map((party) => (
+            <React.Fragment key={party.name}>
+              <Scatter name={party.name} data={[party]} fill={party.fill} />
+              <Label
+                value={party.name}
+                position={{ x: party.x * 40, y: party.y * -40 }}
+                fill={party.fill}
+                fontSize={12}
+                offset={10}
+              />
+            </React.Fragment>
+          ))}
+          <Scatter
+            name="Meine Position"
+            data={[userCoordinate]}
+            fill="#000000"
+          />
+        </ScatterChart>
+      </div>
+    </Card>
   );
 };
 
