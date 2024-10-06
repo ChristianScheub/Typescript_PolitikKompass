@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   XAxis,
   YAxis,
@@ -9,11 +9,12 @@ import {
   ScatterChart,
   Label,
 } from "recharts";
-import Card from "../ui/Card/Card";
+import Card from "../../ui/Card/Card";
 
 interface CoordinateSystemProps {
   userCoordinate: { x: number; y: number };
 }
+
 const partiesData = [{ name: "Union", x: 6, y: 2, fill: "#FFA500" }];
 /*
 const partiesData = [
@@ -30,23 +31,42 @@ const partiesData = [
 const CoordinateSystem: React.FC<CoordinateSystemProps> = ({
   userCoordinate,
 }) => {
+  const [chartSize, setChartSize] = useState(300); // Kleinere Initialgröße
+
+  // Funktion zum Aktualisieren der Größe
+  const updateChartSize = () => {
+    const containerWidth = window.innerWidth * 0.7;
+    const containerHeight = window.innerHeight * 0.7;
+    const newSize = Math.min(containerWidth, containerHeight, 500); // Maximalgröße von 500px
+    setChartSize(Math.max(newSize, 200)); // Mindestgröße von 200px
+  };
+
+  useEffect(() => {
+    updateChartSize(); // Setze die Größe beim ersten Rendern
+    window.addEventListener("resize", updateChartSize); // Füge einen Event Listener hinzu
+
+    return () => {
+      window.removeEventListener("resize", updateChartSize); // Entferne den Event Listener beim Unmount
+    };
+  }, []);
+
   return (
-    <Card>
-      <div style={{ width: "100%", height: "700px" }}>
+    <Card style={{height: "40vh", display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: "3vw",paddingBottom: "3vw" }}>
+      <div style={{ width: chartSize, height: chartSize, position: "relative" }}>
         <ScatterChart
-          width={600}
-          height={600}
-          margin={{ right: 20, bottom: 5, left: 10 }}
+          width={chartSize}
+          height={chartSize}
+          margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
         >
           <CartesianGrid />
-          <XAxis type="number" dataKey="x" domain={[-20, 20]}>
+          <XAxis type="number" dataKey="x" domain={[-10, 10]}>
             <Label
               value="sozialistisch | kapitalistisch"
               offset={-5}
-              position="insideBottomRight"
+              position="insideBottom"
             />
           </XAxis>
-          <YAxis type="number" dataKey="y" domain={[-20, 20]}>
+          <YAxis type="number" dataKey="y" domain={[-10, 10]}>
             <Label
               value="liberal | konservativ"
               angle={-90}
@@ -61,7 +81,7 @@ const CoordinateSystem: React.FC<CoordinateSystemProps> = ({
               <Scatter name={party.name} data={[party]} fill={party.fill} />
               <Label
                 value={party.name}
-                position={{ x: party.x * 40, y: party.y * -40 }}
+                position={{ x: party.x * (chartSize / 20), y: party.y * -(chartSize / 20) }}
                 fill={party.fill}
                 fontSize={12}
                 offset={10}
@@ -75,6 +95,7 @@ const CoordinateSystem: React.FC<CoordinateSystemProps> = ({
           />
         </ScatterChart>
       </div>
+      <br/>
     </Card>
   );
 };

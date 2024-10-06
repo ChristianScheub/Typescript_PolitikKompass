@@ -5,7 +5,7 @@ interface QuestionTextProps {
 }
 
 const QuestionText: React.FC<QuestionTextProps> = ({ text }) => {
-  return <h2>{text}</h2>;
+  return <p>{text}</p>;
 };
 
 export default QuestionText;

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { calculateScores } from "../../services/scoringService";
 import QuestionList from "../QuestionList";
 import Title from "../../ui/Title";
-import CoordinateSystem from "../CoordinateSystemContainer";
 import { Category } from "../../types/Category";
 import { ButtonAlignment } from "../../types/ButtonAlignment";
 import CategoryView from "../views/CategorieView";
@@ -11,6 +10,8 @@ import { questions } from "../../data/quesions";
 import FloatingBtn from "../../ui/FloatingBtn";
 import { FaInfo } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import CoordinateSystem from "../CoordinateSystem/CoordinateSystem";
+import NavbarView from "../views/NavBar/NavBarView";
 
 const Home: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
@@ -78,16 +79,14 @@ const Home: React.FC = () => {
 
   return (
     <div className="app-container">
+      <NavbarView
+        currentCategory={currentCategory}
+        categories={Object.values(Category)}
+        onCategoryChange={handleCategoryChange}
+      />
       <Title text="Politik Kompass" />
       <div>
         <center>
-          <CategoryView
-            currentCategory={currentCategory}
-            categories={Object.values(Category)}
-            currentQuestionIndex={currentQuestionIndex}
-            totalQuestions={filteredQuestions.length}
-            onCategoryChange={handleCategoryChange}
-          />
           {filteredQuestions.length > 0 && (
             <QuestionList
               question={filteredQuestions[currentQuestionIndex]}
@@ -96,6 +95,7 @@ const Home: React.FC = () => {
               handlePreviousQuestion={handlePreviousQuestion}
               handleNextQuestion={handleNextQuestion}
               currentQuestionIndex={currentQuestionIndex}
+              totalQuestions={filteredQuestions.length}
               filteredQuestions={filteredQuestions}
             />
           )}

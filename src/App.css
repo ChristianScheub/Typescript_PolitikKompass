@@ -2,17 +2,7 @@
 .app-container {
   padding: 20px;
   font-family: Arial, sans-serif;
-}
-
-.content {
-  display: flex; /* Flexbox für nebeneinanderliegende Elemente */
-  justify-content: space-between; /* Platz zwischen Fragen und Koordinatensystem */
-  align-items: flex-start; /* Vertikale Ausrichtung an der Oberseite */
-}
-
-.question-container {
-  margin: 20px 20px 20px 0; /* Rechtsabstand für die Fragen */
-  flex: 1; /* Damit die Fragen den verfügbaren Platz einnehmen */
+  max-width: 100vw;
 }
 
 .options {
@@ -42,11 +32,6 @@
   margin-top: 20px;
 }
 
-.coordinate-system {
-  flex: 1; /* Damit das Koordinatensystem den verfügbaren Platz einnimmt */
-  margin-left: 20px; /* Abstand zu den Fragen */
-}
-
 .makeItCenter {
   display: flex;
   justify-content: center;
@@ -63,4 +48,8 @@
   padding-left: 2vw;
   padding-right: 2vw;
   width: 96vw;
+}
+
+h1{
+  padding-top:10vw;
 }
