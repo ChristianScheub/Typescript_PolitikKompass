@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Navbar } from "react-bootstrap";
 import CategoryView from "../CategorieView";
 import { Category } from "../../../types/Category";
-import './NavbarView.css';
+import './NavBarView.css';
 
 
 interface NavbarViewProps {
