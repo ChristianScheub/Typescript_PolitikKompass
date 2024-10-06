@@ -4,4 +4,5 @@ export interface Question {
   category: string;
   axis: "x" | "y"; // x für sozialistisch/kapitalistisch, y für liberal/konservativ
   direction: number; // z.B. -2 für stark sozialistisch oder stark liberal bis +2 für stark kapitalistisch oder konservativ
+  secondAxis? : "x" | "-x" | "y"| "-y"; 
 }

@@ -58,7 +58,7 @@ const App: React.FC = () => {
 
   return (
     <div className="app-container">
-      <Title text="Politischer Einstellungs-Test" />
+      <Title text="Politik Kompass" />
       <div>
         <h3>Aktuelle Kategorie: {currentCategory}</h3>
         <div>

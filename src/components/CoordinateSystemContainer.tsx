@@ -13,7 +13,10 @@ import {
 interface CoordinateSystemProps {
   userCoordinate: { x: number; y: number };
 }
-
+const partiesData = [
+  { name: "Ich", x: 0, y: 0, fill: "#800080" }
+];
+/*
 const partiesData = [
   { name: "Ich", x: 0, y: 0, fill: "#000000" }, // User position
   { name: "Union", x: 6, y: 2, fill: "#FFA500" }, // Example party positions
@@ -23,7 +26,7 @@ const partiesData = [
   { name: "Linke", x: -2, y: -3, fill: "#800080" },
   { name: "AFD", x: 7, y: 1, fill: "#0000FF" },
   { name: "BSW", x: -1, y: 0, fill: "#FFC0CB" }, // BSW position
-];
+];*/
 
 const CoordinateSystem: React.FC<CoordinateSystemProps> = ({ userCoordinate }) => {
   return (
