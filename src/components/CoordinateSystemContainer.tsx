@@ -39,14 +39,14 @@ const CoordinateSystem: React.FC<CoordinateSystemProps> = ({
           margin={{ right: 20, bottom: 5, left: 10 }}
         >
           <CartesianGrid />
-          <XAxis type="number" dataKey="x" domain={[-40, 40]}>
+          <XAxis type="number" dataKey="x" domain={[-20, 20]}>
             <Label
               value="sozialistisch | kapitalistisch"
               offset={-5}
               position="insideBottomRight"
             />
           </XAxis>
-          <YAxis type="number" dataKey="y" domain={[-40, 40]}>
+          <YAxis type="number" dataKey="y" domain={[-20, 20]}>
             <Label
               value="liberal | konservativ"
               angle={-90}
