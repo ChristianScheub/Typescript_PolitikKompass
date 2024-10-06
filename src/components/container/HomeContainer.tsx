@@ -4,7 +4,6 @@ import QuestionList from "../QuestionList";
 import Title from "../../ui/Title";
 import { Category } from "../../types/Category";
 import { ButtonAlignment } from "../../types/ButtonAlignment";
-import CategoryView from "../views/CategorieView";
 import { Question } from "../../types/Question";
 import { questions } from "../../data/quesions";
 import FloatingBtn from "../../ui/FloatingBtn";
