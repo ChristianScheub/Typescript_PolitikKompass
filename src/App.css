@@ -58,3 +58,9 @@
   background-color: #3d6868;
   color: white
 }
+
+.after-login-container{
+  padding-left: 2vw;
+  padding-right: 2vw;
+  width: 96vw;
+}

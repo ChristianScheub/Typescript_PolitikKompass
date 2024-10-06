@@ -10,7 +10,7 @@ Ziegeläcker 56 <br />
 Kontakt Telefon: +49 176 21674883 <br /> 
 Geschäftsführer/Inhaber: Christian Scheub <br /> 
 Bei Fragen oder Anliegen zum Datenschutz können Sie uns gerne unter christian.developer.app@gmail.com kontaktieren. <br /> 
-Link zum Impressum: https://lemon-bay-0f0bdf203.5.azurestaticapps.net/impressum <br /> <br /> 
+Link zum Impressum: https://proud-grass-02ae08f03.5.azurestaticapps.net/impressum <br /> <br /> 
 <strong>2. Cookies und ähnliche Technologien</strong><br /> 
 Wir verwenden Cookies und ähnliche Technologien, um Ihnen personalisierte Werbung anzubieten und die Leistung unserer Webseite/App zu verbessern. Dazu gehören Cookies, die auf Ihrem Gerät gespeichert werden. Diese Technologien helfen uns, Ihre Präferenzen zu speichern und die Benutzererfahrung zu optimieren. <br /> <br /> 
 <strong>3. Erhebung und Verarbeitung von Daten durch AdMob und AdSense</strong><br /> 
@@ -30,7 +30,7 @@ Wir bemühen uns, Ihre Daten durch entsprechende technische und organisatorische
 Personenbezogene Daten sind Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen. In diesem Zusammenhang können personenbezogene Daten von AdMob und AdSense gesammelt und verarbeitet werden. <br /> <br /> 
 <strong>8. Änderungen dieser Datenschutzerklärung</strong><br /> 
 Wir behalten uns das Recht vor, diese Datenschutzerklärung zu ändern, um den rechtlichen Anforderungen zu entsprechen oder Änderungen unserer Datenverarbeitungspraktiken widerzuspiegeln. Bitte überprüfen Sie diese Erklärung regelmäßig, um auf dem Laufenden zu bleiben. <br /> 
-Datum: 01.09.2024 <br /> <br /> 
+Datum: 06.10.2024 <br /> <br /> 
 <strong>Privacy Policy for Website/App</strong> <br /> 
 Thank you for visiting our website/app. We attach great importance to the protection of your data and would like to inform you that we use AdMob and AdSense to provide personalized advertising. These services may use cookies and similar technologies to collect data about your use of the website/app and to deliver tailored advertising. The data collected by these services may include:
 - Your IP address
@@ -65,7 +65,7 @@ We strive to protect your data through appropriate technical and organizational 
 Personal data refers to information relating to an identified or identifiable natural person. In this context, personal data may be collected and processed by AdMob and AdSense. <br /> <br /> 
 <strong>8. Changes to This Privacy Policy</strong><br /> 
 We reserve the right to change this privacy policy to comply with legal requirements or to reflect changes in our data processing practices. Please check this statement regularly to stay up to date. <br /> 
-Date: September 7, 2024
+Date: October 6, 2024
 `;
 
 
