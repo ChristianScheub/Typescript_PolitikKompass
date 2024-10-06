@@ -6,11 +6,13 @@ import UsedLibsListContainer from "../../legal/usedLibs/container_usedLibList";
 interface ViewSettingsProps {
   onDatenschutzClick: (navigate: NavigateFunction) => void;
   onImpressumClick: (navigate: NavigateFunction) => void;
+  onIsAboutUsPopupOpen: (isOpen: boolean) => void;
 }
 
 const ViewSettings: React.FC<ViewSettingsProps> = ({
   onDatenschutzClick,
   onImpressumClick,
+  onIsAboutUsPopupOpen,
 }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -21,10 +23,15 @@ const ViewSettings: React.FC<ViewSettingsProps> = ({
         <br />
 
         <div className="after-login-container">
-
-
           <div className="mb-3 margin2vw">
             <h1>{t("settings_Information")}</h1>
+            <hr />
+            <p
+              data-testid="settings-impressum"
+              onClick={() => onIsAboutUsPopupOpen(true)}
+            >
+              Über uns
+            </p>
             <hr />
             <p
               data-testid="settings-edatenschutz"

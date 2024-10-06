@@ -4,13 +4,6 @@ Language: Typescript React with Vite<br>
 
 Website: https://proud-grass-02ae08f03.5.azurestaticapps.net
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
@@ -114,28 +107,34 @@ Generate the JSON with the licenses of the NPM packages used. This can then repl
 # Used NPM Modules
 According to the command npm list You can see the deeper NPM modules used and which of these are used in the licenses.json.
 
-├── @emotion/react@11.13.3
-├── @emotion/styled@11.13.0
-├── @eslint/js@9.12.0
-├── @mui/material@6.1.2
-├── @types/i18next@13.0.0
-├── @types/react-dom@18.3.0
-├── @types/react@18.3.11
-├── @vitejs/plugin-react-swc@3.7.1
-├── eslint-plugin-react-hooks@5.1.0-rc-fb9a90fa48-20240614
-├── eslint-plugin-react-refresh@0.4.12
-├── eslint@9.12.0
-├── globals@15.10.0
-├── i18next-browser-languagedetector@8.0.0
-├── i18next@23.15.2
-├── react-bootstrap@2.10.5
-├── react-dom@18.3.1
-├── react-i18next@15.0.2
-├── react-icons@5.3.0
-├── react-router-dom@6.26.2
-├── react@18.3.1
-├── recharts@2.12.7
-├── rimraf@6.0.1
-├── typescript-eslint@8.8.0
-├── typescript@5.6.2
-└── vite@5.4.8
+<br />├── @emotion/react@11.13.3
+<br />├── @emotion/styled@11.13.0
+<br />├── @eslint/js@9.12.0
+<br />├── @mui/material@6.1.2
+<br />├── @testing-library/jest-dom@6.5.0
+<br />├── @testing-library/react@16.0.1
+<br />├── @types/i18next@13.0.0
+<br />├── @types/jest@29.5.13
+<br />├── @types/react-dom@18.3.0
+<br />├── @types/react-select@5.0.1
+<br />├── @types/react@18.3.11
+<br />├── @vitejs/plugin-react-swc@3.7.1
+<br />├── eslint-plugin-react-hooks@5.1.0-rc-fb9a90fa48-20240614
+<br />├── eslint-plugin-react-refresh@0.4.12
+<br />├── eslint@9.12.0
+<br />├── globals@15.10.0
+<br />├── i18next-browser-languagedetector@8.0.0
+<br />├── i18next@23.15.2
+<br />├── jest@29.7.0
+<br />├── react-bootstrap@2.10.5
+<br />├── react-dom@18.3.1
+<br />├── react-i18next@15.0.2
+<br />├── react-icons@5.3.0
+<br />├── react-router-dom@6.26.2
+<br />├── react-select@5.8.1
+<br />├── react@18.3.1
+<br />├── recharts@2.12.7
+<br />├── rimraf@6.0.1
+<br />├── typescript-eslint@8.8.0
+<br />├── typescript@5.6.2
+<br />└── vite@5.4.8

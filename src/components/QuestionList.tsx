@@ -1,5 +1,5 @@
 import React from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa"; // Importiere die Icons
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import QuestionComponent from "./views/QuestionView";
 import Card from "../ui/Card/Card";
 import { Question } from "../types/Question";

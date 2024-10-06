@@ -1,13 +1,20 @@
 import { NavigateFunction } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import SettingsView from "../views/SettingsView";
 import NavbarView from "../views/NavBar/NavBarView";
+import HelpTextAboutUs from "../views/HelpTextAboutUs";
+
 const ContainerSettings: React.FC = () => {
+  const [isAboutUsPopupOpen, setIsAboutUsPopupOpen] = useState(false);
+
   const handleImpressumClick = (navigate: NavigateFunction) => {
     navigate("/legal/impressum");
   };
   const handleDatenschutzClick = (navigate: NavigateFunction) => {
     navigate("/legal/datenschutz");
+  };
+  const handleClosePopup = () => {
+    setIsAboutUsPopupOpen(false);
   };
 
   return (
@@ -16,7 +23,9 @@ const ContainerSettings: React.FC = () => {
       <SettingsView
         onDatenschutzClick={handleDatenschutzClick}
         onImpressumClick={handleImpressumClick}
+        onIsAboutUsPopupOpen={setIsAboutUsPopupOpen}
       />
+      {isAboutUsPopupOpen && <HelpTextAboutUs onClose={handleClosePopup} />}
     </div>
   );
 };
