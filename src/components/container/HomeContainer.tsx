@@ -24,6 +24,8 @@ const Home: React.FC = () => {
   );
   const navigate = useNavigate();
 
+  const categoryList = Object.values(Category); // Liste aller Kategorien
+
   useEffect(() => {
     console.log(`Scores updated: x = ${scores.x}, y = ${scores.y}`);
   }, [scores]);
@@ -48,20 +50,35 @@ const Home: React.FC = () => {
     );
     setScores(calculatedScores);
 
-    // Move to the next question
+    // Prüfen, ob es die letzte Frage in der Kategorie ist
     if (currentQuestionIndex < filteredQuestions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      // Automatisch zur nächsten Kategorie wechseln
+      const currentCategoryIndex = categoryList.indexOf(currentCategory);
+      if (currentCategoryIndex < categoryList.length - 1) {
+        // Nächste Kategorie setzen
+        const nextCategory = categoryList[currentCategoryIndex + 1];
+        setCurrentCategory(nextCategory);
+        setCurrentQuestionIndex(0); // Zurück zur ersten Frage in der neuen Kategorie
+        setAnswers([]); // Antworten zurücksetzen, wenn die Kategorie wechselt
+      } else {
+        // Keine weiteren Kategorien, eventuell auf eine Ergebnisseite weiterleiten
+        console.log("Alle Kategorien abgeschlossen.");
+        // Hier könntest du zu einer Ergebniss-Seite navigieren
+        // navigate("/results");
+      }
     }
   };
 
   const handleCategoryChange = (category: Category) => {
     setCurrentCategory(category);
     setCurrentQuestionIndex(0);
-    setAnswers([]); // Reset answers when category changes
+    setAnswers([]); // Antworten zurücksetzen, wenn die Kategorie manuell gewechselt wird
   };
 
   const openInfo = () => {
-    navigate("/info");
+    navigate("/legal/Info");
   };
 
   const handleNextQuestion = () => {

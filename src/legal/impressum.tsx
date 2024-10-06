@@ -2,15 +2,16 @@ import { Card } from "react-bootstrap";
 import { impressum_text } from "./app_texts";
 import CodeToTextParser from "./codeToTextParser";
 import React from "react";
+import NavbarView from "../components/views/NavBar/NavBarView";
 
 const Impressum: React.FC = () => {
-
   return (
-    <div
-    >
+    <div>
+      <NavbarView />
       <div
         style={{
           marginTop: "env(safe-area-inset-top)",
+          paddingTop: "15vw"
         }}
       >
         <div className="after-login-container">

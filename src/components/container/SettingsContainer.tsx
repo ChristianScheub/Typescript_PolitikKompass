@@ -1,31 +1,23 @@
-import { NavigateFunction, useLocation } from "react-router-dom";
+import { NavigateFunction } from "react-router-dom";
 import React from "react";
 import SettingsView from "../views/SettingsView";
+import NavbarView from "../views/NavBar/NavBarView";
 const ContainerSettings: React.FC = () => {
-  const location = useLocation();
-
-  const isInfoStart = location.pathname.includes("infoStart");
-
   const handleImpressumClick = (navigate: NavigateFunction) => {
-    if (isInfoStart) {
-      navigate("/impressumStart");
-    } else {
-      navigate("/impressum");
-    }
+    navigate("/legal/impressum");
   };
   const handleDatenschutzClick = (navigate: NavigateFunction) => {
-    if (isInfoStart) {
-      navigate("/datenschutzStart");
-    } else {
-      navigate("/datenschutz");
-    }
+    navigate("/legal/datenschutz");
   };
 
   return (
-    <SettingsView
-      onDatenschutzClick={handleDatenschutzClick}
-      onImpressumClick={handleImpressumClick}
-    />
+    <div>
+      <NavbarView />
+      <SettingsView
+        onDatenschutzClick={handleDatenschutzClick}
+        onImpressumClick={handleImpressumClick}
+      />
+    </div>
   );
 };
 

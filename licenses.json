@@ -167,6 +167,27 @@
     "path": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/@emotion/weak-memoize",
     "licenseFile": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/@emotion/weak-memoize/LICENSE"
   },
+  "@floating-ui/core@1.6.8": {
+    "licenses": "MIT",
+    "repository": "https://github.com/floating-ui/floating-ui",
+    "publisher": "atomiks",
+    "path": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/@floating-ui/core",
+    "licenseFile": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/@floating-ui/core/LICENSE"
+  },
+  "@floating-ui/dom@1.6.11": {
+    "licenses": "MIT",
+    "repository": "https://github.com/floating-ui/floating-ui",
+    "publisher": "atomiks",
+    "path": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/@floating-ui/dom",
+    "licenseFile": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/@floating-ui/dom/LICENSE"
+  },
+  "@floating-ui/utils@0.2.8": {
+    "licenses": "MIT",
+    "repository": "https://github.com/floating-ui/floating-ui",
+    "publisher": "atomiks",
+    "path": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/@floating-ui/utils",
+    "licenseFile": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/@floating-ui/utils/LICENSE"
+  },
   "@jridgewell/gen-mapping@0.3.5": {
     "licenses": "MIT",
     "repository": "https://github.com/jridgewell/gen-mapping",
@@ -366,6 +387,11 @@
     "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
     "path": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/@types/prop-types",
     "licenseFile": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/@types/prop-types/LICENSE"
+  },
+  "@types/react-select@5.0.1": {
+    "licenses": "MIT",
+    "path": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/@types/react-select",
+    "licenseFile": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/@types/react-select/LICENSE"
   },
   "@types/react-transition-group@4.4.11": {
     "licenses": "MIT",
@@ -797,6 +823,14 @@
     "path": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/loose-envify",
     "licenseFile": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/loose-envify/LICENSE"
   },
+  "memoize-one@6.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/alexreardon/memoize-one",
+    "publisher": "Alex Reardon",
+    "email": "alexreardon@gmail.com",
+    "path": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/memoize-one",
+    "licenseFile": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/memoize-one/LICENSE"
+  },
   "ms@2.1.3": {
     "licenses": "MIT",
     "repository": "https://github.com/vercel/ms",
@@ -938,6 +972,13 @@
     "path": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/react-router",
     "licenseFile": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/react-router/LICENSE.md"
   },
+  "react-select@5.8.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/JedWatson/react-select/tree/master/packages/react-select",
+    "publisher": "Jed Watson",
+    "path": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/react-select",
+    "licenseFile": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/react-select/README.md"
+  },
   "react-smooth@4.0.1": {
     "licenses": "MIT",
     "repository": "https://github.com/recharts/react-smooth",
@@ -1075,6 +1116,12 @@
     "email": "monastic.panic@gmail.com",
     "path": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/@restart/ui/node_modules/uncontrollable",
     "licenseFile": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/@restart/ui/node_modules/uncontrollable/LICENSE"
+  },
+  "use-isomorphic-layout-effect@1.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/Andarist/use-isomorphic-layout-effect",
+    "path": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/use-isomorphic-layout-effect",
+    "licenseFile": "/Users/christianscheub/Documents/PolitikKompass/Typescript_PolitikKompass/node_modules/use-isomorphic-layout-effect/LICENSE"
   },
   "victory-vendor@36.9.2": {
     "licenses": "MIT AND ISC",
