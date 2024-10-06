@@ -4,15 +4,17 @@ import "./Button.css";
 interface ButtonProps {
   onClick: () => void;
   label: string;
-  backgroundColor?: string; // Optionaler Prop für die Hintergrundfarbe
+  backgroundColor?: string;
+  disabled?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ onClick, label, backgroundColor }) => {
+const Button: React.FC<ButtonProps> = ({ onClick, label, backgroundColor, disabled }) => {
   return (
     <button
       onClick={onClick}
       className="ui-button"
-      style={{ backgroundColor }} // Setze die Hintergrundfarbe dynamisch
+      style={{ backgroundColor }} 
+      disabled={disabled}
     >
       {label}
     </button>

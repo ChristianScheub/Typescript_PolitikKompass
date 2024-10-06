@@ -28,7 +28,6 @@ const Home: React.FC = () => {
     console.log(`Scores updated: x = ${scores.x}, y = ${scores.y}`);
   }, [scores]);
 
-  // Gefilterte Fragen basierend auf der aktuellen Kategorie
   const filteredQuestions: Question[] = questions.filter((question) =>
     question.category.includes(currentCategory)
   );
@@ -49,6 +48,7 @@ const Home: React.FC = () => {
     );
     setScores(calculatedScores);
 
+    // Move to the next question
     if (currentQuestionIndex < filteredQuestions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     }
@@ -57,10 +57,23 @@ const Home: React.FC = () => {
   const handleCategoryChange = (category: Category) => {
     setCurrentCategory(category);
     setCurrentQuestionIndex(0);
+    setAnswers([]); // Reset answers when category changes
   };
 
   const openInfo = () => {
     navigate("/info");
+  };
+
+  const handleNextQuestion = () => {
+    if (currentQuestionIndex < filteredQuestions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    }
+  };
+
+  const handlePreviousQuestion = () => {
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex(currentQuestionIndex - 1);
+    }
   };
 
   return (
@@ -70,7 +83,7 @@ const Home: React.FC = () => {
         <center>
           <CategoryView
             currentCategory={currentCategory}
-            categories={Object.values(Category)} // Verwende das enum für die Kategorien
+            categories={Object.values(Category)}
             currentQuestionIndex={currentQuestionIndex}
             totalQuestions={filteredQuestions.length}
             onCategoryChange={handleCategoryChange}
@@ -80,6 +93,10 @@ const Home: React.FC = () => {
               question={filteredQuestions[currentQuestionIndex]}
               onAnswer={handleAnswer}
               answered={answers.map((answer) => answer.id)}
+              handlePreviousQuestion={handlePreviousQuestion}
+              handleNextQuestion={handleNextQuestion}
+              currentQuestionIndex={currentQuestionIndex}
+              filteredQuestions={filteredQuestions}
             />
           )}
           <CoordinateSystem userCoordinate={scores} />
